@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css"
+		href="./voice-translator.css">
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+
+</head>
+<body translate="no">
+	<div class="particle-network-animation">
+		<div style="float: left;box-sizing: border-box;width: 50%;height: 420px;padding: 10px;color: antiquewhite;">
+			<div class="app particle-network-animation" style="display: contents;">
+				<img src="./icons/thinglogixlogo.png" height="50"
+					width="150">
+				<h1 style="margin: 0;">Voice Translator</h1>
+			</div>
+			<br />
+			<div class="app">
+				Convert Arabic to English<br />
+				<div id="wrapper">
+					<div class="flags" style="color: white;"><img id="source_en" style="border-radius: 10%;"
+							class='clickableimage' src="./icons/arabic.png
+		  " height="100" width="150"><br />Dubai(Arabic)</div>
+					<div class="flags" style="color: white;"><img id="source_es" style="border-radius: 10%;"
+							class='clickableimage'
+							src="./icons/usflag.png" height="100"
+							width="150"><br />US(English)</div>
+				</div>
+			</div>
+			<br />
+			<div class="app">
+				<label>Vocal Intensity : </label>
+				<meter id="meterVolue" value="0" min="0" max="20"></meter>
+			</div>
+			</br>
+			<div class="app">
+				<div id="babel_button">
+					<img id="start_button" class='clickableimage'
+						src="./icons/startbutton.png" height="80"
+						onclick="babel_start();">
+					&nbsp;&nbsp;
+					<img id="stop_button"
+						src="./icons/blurstopbutton.png"
+						height="80" onclick="babel_stop();">
+				</div>
+			</div>
+			
+		</div>
+		<div style="float: left;box-sizing: border-box;width: 50%;height: 420px;padding: 10px;">
+			<div class="translatedbox">Processing...</div>
+			<div class="translatedbox" id = "voicetranslatedData">
+			</div>
+			<div class="myBox" id = "translatedData">
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+	<script src="./particle-network.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+	<script src="./voice-translator-config.js"></script>
+	<script src="./voice-translator.js"></script>
+</body>
+</html>

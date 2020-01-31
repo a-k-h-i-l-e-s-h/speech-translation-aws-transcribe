@@ -1,0 +1,135 @@
+body {
+	font-family: 'Allerta Stencil', sans-serif;
+}
+h1.title {
+	text-align: left;
+	padding-left: 0.2em;
+}
+div.app {
+	width: 100%;
+	text-align: center;
+}
+.flags {
+	display: inline-block;
+	font-size: 12px;
+	color:#80797C;
+}
+.clickableimage:hover {
+    cursor: pointer;
+}
+audio {
+   display:none;
+}
+span#processing {
+	color: red;
+	display: none;
+}
+.particle-network-animation {
+    background-image: url('https://deploying-voice-translation-app.s3.amazonaws.com/icons/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #ffffff;
+  &::before {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background-image: url(http://web.frfr.me/dev/world-map-optimized.jpg);
+    background-image: url(https://images.unsplash.com/photo-1450849608880-6f787542c88a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=786a67dca1d8791d181bfd90b16240d9);
+    background-position: center center;
+  background-size: cover;
+    opacity: 0.2;
+  }
+}
+.glow {
+  z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-image: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.025), transparent);
+}
+$duration: 25s;
+.glow-1 {
+  width: 150vw;
+  height: 150vh;
+  margin-top: -75vh;
+  margin-left: -75vw;
+  animation: glow-1-move $duration linear infinite both;
+}
+@keyframes glow-1-move {
+  from {
+    transform: translate(-100%, 100%);
+  }
+  to {
+    transform: translate(100%, -100%);
+  }
+}
+.glow-2 {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -50vh;
+  margin-left: -50vw;
+  animation: glow-2-move $duration linear $duration / 3 infinite both;
+}
+@keyframes glow-2-move {
+  from {
+    transform: translate(-100%, 0%);
+  }
+  to {
+    transform: translate(100%, 100%);
+  }
+}
+.glow-3 {
+  width: 120vw;
+  height: 120vh;
+  margin-top: -60vh;
+  margin-left: -60vw;
+  animation: glow-3-move $duration linear $duration / 3 * 2 infinite both;
+}
+@keyframes glow-3-move {
+  from {
+    transform: translate(100%, 100%);
+  }
+  to {
+    transform: translate(0%, -100%);
+  }
+}
+/* Box styles */
+.myBox {
+    color: #e8f6ff;
+    border: none;
+    padding: 5px;
+    font: 20px/30px monospace;
+    width: 90%;
+    margin-top:80px;
+    height: 370px;
+    overflow: scroll;
+    background: #00080c;
+    opacity: 0.9;
+
+}
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px olivedrab;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: white; 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #7bac10;
+}
